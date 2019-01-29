@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/san-di/projects/ruby_rpg/spec/character/character_spec.rb": [
+      "/Users/san-di/projects/ruby_rpg/spec/models/character/character_spec.rb": [
         1,
         null,
         1,
@@ -11,6 +11,13 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
         null,
         null,
         null,
@@ -22,14 +29,14 @@
         1,
         null,
         1,
-        1,
-        1,
-        1,
+        2,
+        2,
+        2,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1548782387
+    "timestamp": 1548783380
   }
 }
