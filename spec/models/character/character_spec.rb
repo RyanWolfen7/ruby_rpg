@@ -24,6 +24,15 @@ describe Character do
       character = Character.new("Name", "Race", "Class", stats)
       expect(character.stats).to eq stats
     end
+
+    it 'should have default stats' do
+      stats = {
+        str: 12, dex: 12, const: 12,
+        char: 12, wis: 12, int: 12
+      }
+      character = Character.new("Name", "Race", "Class")
+      expect(character.stats).to eq stats
+    end
   end
 
 end
