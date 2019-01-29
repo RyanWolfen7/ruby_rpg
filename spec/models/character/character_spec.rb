@@ -9,11 +9,18 @@ describe Character do
       expect(character.class).to eq("Class")
     end
 
-    it 'should have a default Health, Magic, Stamina' do
+    it 'should have a default max Health, Magic, Stamina' do
       character = Character.new("Name", "Race", "Class")
-      expect(character.hp).to eq(100)
-      expect(character.magic).to eq(100)
-      expect(character.stamina).to eq(100)
+      expect(character.hp[:max]).to eq(100)
+      expect(character.magic[:max]).to eq(100)
+      expect(character.stamina[:max]).to eq(100)
+    end
+
+    it 'should have a current health, magic, stamina' do
+      character = Character.new("Name", "Race", "Class")
+      expect(character.hp[:current]).to eq(100)
+      expect(character.magic[:current]).to eq(100)
+      expect(character.stamina[:current]).to eq(100)
     end
 
     it 'should have stats' do
