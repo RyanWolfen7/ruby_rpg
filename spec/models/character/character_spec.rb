@@ -15,6 +15,15 @@ describe Character do
       expect(character.magic).to eq(100)
       expect(character.stamina).to eq(100)
     end
+
+    it 'should have stats' do
+      stats = {
+        str: 10, dex: 18, const: 15,
+        char: 10, wis: 10, int: 12
+      }
+      character = Character.new("Name", "Race", "Class", stats)
+      expect(character.stats).to eq stats
+    end
   end
 
 end

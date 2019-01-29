@@ -1,15 +1,20 @@
 class Character
-  DEFAULT_STATS = 100
+  DEFAULT_CORE_STATS = 100
+  DEFAULT_STATS = {
+    str: 12, dex: 12, const: 12,
+    char: 12, wis: 12, int: 12
+  }
 
-  attr_reader :name, :race, :class, :hp, :magic, :stamina
+  attr_reader :name, :race, :class, :hp, :magic, :stamina, :stats
 
-  def initialize(name, race, c_class)
+  def initialize(name, race, c_class, stats = DEFAULT_STATS)
     @name = name
     @race = race
     @class = c_class
-    @hp = DEFAULT_STATS
-    @magic = DEFAULT_STATS
-    @stamina = DEFAULT_STATS
+    @hp = DEFAULT_CORE_STATS
+    @magic = DEFAULT_CORE_STATS
+    @stamina = DEFAULT_CORE_STATS
+    @stats = stats
   end
 
 end
