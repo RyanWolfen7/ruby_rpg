@@ -1,5 +1,7 @@
 class Character
-  DEFAULT_CORE_STATS = 100
+  DEFAULT_CORE_STATS = {
+    max: 100, current: 100
+  }
   DEFAULT_STATS = {
     str: 12, dex: 12, const: 12,
     char: 12, wis: 12, int: 12
