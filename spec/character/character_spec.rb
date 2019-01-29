@@ -1,4 +1,4 @@
-require 'lib/character/character.rb'
+require_relative '../../lib/character/character.rb'
 
 describe Character do
   describe "#Init for Class" do
