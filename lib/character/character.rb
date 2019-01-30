@@ -6,8 +6,12 @@ class Character
     str: 12, dex: 12, const: 12,
     char: 12, wis: 12, int: 12
   }
+  DEFAULT_LEVEL = 1
 
-  attr_reader :name, :race, :class, :hp, :magic, :stamina, :stats
+
+  attr_reader :name, :race, :class,
+              :hp, :magic, :stamina,
+              :stats, :level
 
   def initialize(name, race, c_class, stats = DEFAULT_STATS)
     @name = name
@@ -17,10 +21,11 @@ class Character
     @magic = DEFAULT_CORE_STATS
     @stamina = DEFAULT_CORE_STATS
     @stats = stats
+    @level = DEFAULT_LEVEL
   end
 
   def dead?
-    @hp[:current] == 0  
+    @hp[:current] == 0
   end
 
 end
