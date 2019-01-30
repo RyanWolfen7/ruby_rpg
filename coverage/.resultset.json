@@ -275,6 +275,27 @@
         null,
         null
       ],
+      "/Users/san-di/projects/ruby_rpg/spec/models/character/classes/fighter_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/san-di/projects/ruby_rpg/lib/character/classes/fighter.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/san-di/projects/ruby_rpg/spec/models/character/race_spec.rb": [
         1,
         null,
@@ -326,6 +347,6 @@
         null
       ]
     },
-    "timestamp": 1548883666
+    "timestamp": 1548885053
   }
 }

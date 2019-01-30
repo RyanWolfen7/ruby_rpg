@@ -1,4 +1,4 @@
-require './lib/classes/fighter.rb'
+require './lib/character/classes/fighter.rb'
 
 describe Fighter do
   describe '#initialize' do
