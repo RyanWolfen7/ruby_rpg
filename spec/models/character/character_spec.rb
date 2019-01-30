@@ -73,6 +73,14 @@ describe Character do
       character.level_up
       expect(character.level).to eq 2
     end
+
+    it 'max xp should jump to 250 and current should reset to 0' do
+      character = Character.new("Name", "Race", "Class")
+      character.xp[:current] = 100
+      character.level_up
+      expect(character.xp[:max]).to eq 250
+      expect(character.xp[:current]).to eq 0
+    end
   end
 
 end
