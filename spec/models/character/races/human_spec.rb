@@ -7,5 +7,10 @@ describe Human do
       bonus = { char: 2, int: 2}
       expect(race.stat_bonus).to eq bonus
     end
+
+    it 'should have the race name' do
+      race = Human.new
+      expect(race.name).to eq ("Human")
+    end
   end
 end
