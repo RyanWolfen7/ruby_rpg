@@ -32,4 +32,8 @@ class Character
     @hp[:current] == 0
   end
 
+  def level_up
+    @level += 1 if @xp[:current] == @xp[:max]
+  end
+
 end
