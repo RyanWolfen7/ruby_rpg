@@ -1,4 +1,6 @@
-class Human
+require_relative '../race.rb'
+
+class Human < Race
 
   attr_reader :stat_bonus, :name, :sub_race
 
