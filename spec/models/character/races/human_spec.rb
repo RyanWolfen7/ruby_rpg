@@ -1,11 +1,11 @@
-require_relative '../../../lib/character/races/human.rb'
+require './lib/character/races/human.rb'
 
 describe Human do
   describe '#Init' do
     it 'should initialize modifiers' do
       race = Human.new
       bonus = { char: 2, int: 2}
-      expect(race.stat_bonus).to eq
+      expect(race.stat_bonus).to eq bonus
     end
   end
 end
