@@ -28,10 +28,10 @@ class Character
     @name = name
     @race = race
     @class = c_class
-    @hp = DEFAULT_HP
-    @magic = DEFAULT_MAGIC
-    @stamina = DEFAULT_STAMINA
     @stats = stats
+    @hp = { max: (@stats[:const] * 3), current: (@stats[:const] * 3) }
+    @magic = { max: (@stats[:int] + @stats[:wis]), current: (@stats[:int] + @stats[:wis]) }
+    @stamina = { max: (@stats[:dex] * 3), current: (@stats[:dex] * 3) }
     @level = DEFAULT_LEVEL
     @xp = DEFAULT_XP
   end
@@ -42,19 +42,18 @@ class Character
 
   def xp_gain(xp)
     @xp[:current] += xp
+    self.level_up if @xp[:current] == @xp[:max]
   end
 
   def level_up
-    if @xp[:current] == @xp[:max]
-      @level += DEFAULT_LEVEL
-      @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
-      @xp[:current] = ZERO
-      @hp[:max] += @stats[:const]/3 + @level
-      @hp[:current] = @hp[:max]
-      @magic[:max] += (@stats[:int]/3) + (@stats[:wis]/3)
-      @magic[:current] = @magic[:max]
-      @stamina[:max] += @stats[:dex]/3 + @level
-      @stamina[:current] = @stamina[:max]
-    end
+    @level += DEFAULT_LEVEL
+    @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
+    @xp[:current] = ZERO
+    @hp[:max] += @stats[:const]/3 + @level
+    @hp[:current] = @hp[:max]
+    @magic[:max] += (@stats[:int]/3) + (@stats[:wis]/3)
+    @magic[:current] = @magic[:max]
+    @stamina[:max] += @stats[:dex]/3 + @level
+    @stamina[:current] = @stamina[:max]
   end
 end
