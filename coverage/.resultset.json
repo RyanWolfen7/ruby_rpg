@@ -234,6 +234,28 @@
         null,
         null
       ],
+      "/Users/san-di/projects/ruby_rpg/spec/models/character/race_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/san-di/projects/ruby_rpg/lib/character/race.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/san-di/projects/ruby_rpg/spec/models/character/races/human_spec.rb": [
         1,
         null,
@@ -263,6 +285,6 @@
         null
       ]
     },
-    "timestamp": 1548880304
+    "timestamp": 1548880771
   }
 }
