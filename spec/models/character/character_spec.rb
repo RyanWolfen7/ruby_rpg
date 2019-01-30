@@ -40,6 +40,11 @@ describe Character do
       character = Character.new("Name", "Race", "Class")
       expect(character.stats).to eq stats
     end
+
+    it 'should start at level 1' do
+      character = Character.new("Name", "Race", "Class")
+      expect(character.level).to eq 1
+    end
   end
 
   describe '#dead?' do
