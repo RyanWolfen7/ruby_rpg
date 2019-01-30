@@ -19,4 +19,8 @@ class Character
     @stats = stats
   end
 
+  def dead?
+    @hp[:current] == 0  
+  end
+
 end
