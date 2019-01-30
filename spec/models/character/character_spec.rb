@@ -45,6 +45,12 @@ describe Character do
       character = Character.new("Name", "Race", "Class")
       expect(character.level).to eq 1
     end
+
+    it 'should have a max and current xp to start' do
+      character = Character.new("Name", "Race", "Class")
+      expect(character.xp[:max]).to eq 100
+      expect(character.xp[:current]).to eq 0
+    end
   end
 
   describe '#dead?' do
