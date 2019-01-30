@@ -202,6 +202,16 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/san-di/projects/ruby_rpg/lib/character/races/human.rb": [
@@ -210,13 +220,14 @@
         1,
         null,
         1,
-        2,
-        2,
+        4,
+        4,
+        4,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1548875347
+    "timestamp": 1548876055
   }
 }
