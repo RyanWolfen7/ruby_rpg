@@ -82,11 +82,18 @@ describe Character do
       expect(character.xp[:current]).to eq 0
     end
 
-    it 'should increase HP from 100 to 106 ' do
+    it 'should increase HP from 100 to 106 with default stats' do
       character = Character.new("Name", "Race", "Class")
       character.level_up
       expect(character.hp[:max]).to eq 106
       expect(character.hp[:current]).to eq 106
+    end
+
+    it 'should increase Magic from 100 to 106 with default stats' do
+      character = Character.new("Name", "Race", "Class")
+      character.level_up
+      expect(character.magic[:max]).to eq 108
+      expect(character.magic[:current]).to eq 108
     end
   end
 
