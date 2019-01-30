@@ -53,6 +53,8 @@ class Character
       @hp[:current] = @hp[:max]
       @magic[:max] += (@stats[:int]/3) + (@stats[:wis]/3)
       @magic[:current] = @magic[:max]
+      @stamina[:max] += @stats[:dex]/3 + @level
+      @stamina[:current] = @stamina[:max]
     end
   end
 end
