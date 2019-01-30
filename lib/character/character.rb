@@ -19,7 +19,7 @@ class Character
     @name = name
     @race = race
     @class = c_class
-    @stats = stats
+    @stats = add_bonus(stats)
     @hp = { max: (@stats[:const] * 3), current: (@stats[:const] * 3) }
     @magic = { max: (@stats[:int] + @stats[:wis]), current: (@stats[:int] + @stats[:wis]) }
     @stamina = { max: (@stats[:dex] * 3), current: (@stats[:dex] * 3) }
@@ -45,6 +45,14 @@ class Character
   end
 
   private
+
+  def add_bonus(stats)
+    return stats unless @race.is_a?(Human)
+    temp = Hash.new(0)
+    stats.each {|key, count| temp[key] += count}
+    @race.stat_bonus.each {|key, count| temp[key] += count}
+    return temp
+  end
 
   def level_up_xp
     @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
