@@ -285,6 +285,12 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/san-di/projects/ruby_rpg/lib/character/classes/fighter.rb": [
@@ -292,7 +298,7 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -347,6 +353,6 @@
         null
       ]
     },
-    "timestamp": 1548885053
+    "timestamp": 1548885311
   }
 }
