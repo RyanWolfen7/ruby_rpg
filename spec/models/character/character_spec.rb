@@ -1,4 +1,5 @@
 require_relative '../../../lib/character/character.rb'
+require 'pry'
 
 describe Character do
   describe "#Initialize" do
@@ -81,11 +82,11 @@ describe Character do
       expect(character.xp[:current]).to eq 0
     end
 
-    it 'should increase HP from 100 to 105 ' do
+    it 'should increase HP from 100 to 106 ' do
       character = Character.new("Name", "Race", "Class")
       character.level_up
-      expect(character.hp[:max]).to eq 105
-      expect(character.hp[:current]).to eq 105
+      expect(character.hp[:max]).to eq 106
+      expect(character.hp[:current]).to eq 106
     end
   end
 
