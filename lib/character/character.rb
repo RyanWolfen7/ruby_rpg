@@ -11,7 +11,7 @@ class Character
   }
   DEFAULT_LEVEL = 1
   LEVEL_UP_MODIFIER = 50
-  RESET_TO_ZERO = 0
+  ZERO = 0
 
 
   attr_reader :name, :race, :class,
@@ -31,7 +31,7 @@ class Character
   end
 
   def dead?
-    @hp[:current] == 0
+    @hp[:current] == ZERO
   end
 
   def xp_gain(xp)
@@ -42,7 +42,7 @@ class Character
     if @xp[:current] == @xp[:max]
       @level += DEFAULT_LEVEL
       @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
-      @xp[:current] = RESET_TO_ZERO
+      @xp[:current] = ZERO
     end
   end
 end
