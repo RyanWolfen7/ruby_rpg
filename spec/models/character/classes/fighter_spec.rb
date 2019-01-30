@@ -10,7 +10,7 @@ describe Fighter do
     it 'should have a stat_bonus' do
       fighter = Fighter.new
       stats = { str: 1, const: 1}
-      expect(fiter.stat_bonus).to eq stats
+      expect(fighter.stat_bonus).to eq stats
     end
   end
 end
