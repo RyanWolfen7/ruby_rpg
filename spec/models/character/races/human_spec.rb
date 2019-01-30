@@ -12,5 +12,15 @@ describe Human do
       race = Human.new
       expect(race.name).to eq ("Human")
     end
+
+    it 'should have sub_race name' do
+      race = Human.new("Bodrin")
+      expect(race.sub_race).to eq "Bodrin"
+    end
+
+    it 'should default to Standard if no param given' do
+      race = Human.new
+      expect(race.sub_race).to eq "Standard"
+    end
   end
 end
