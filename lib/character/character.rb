@@ -6,12 +6,15 @@ class Character
     str: 12, dex: 12, const: 12,
     char: 12, wis: 12, int: 12
   }
+  DEFAULT_XP = {
+    max: 100, current: 0
+  }
   DEFAULT_LEVEL = 1
 
 
   attr_reader :name, :race, :class,
               :hp, :magic, :stamina,
-              :stats, :level
+              :stats, :level, :xp
 
   def initialize(name, race, c_class, stats = DEFAULT_STATS)
     @name = name
@@ -22,6 +25,7 @@ class Character
     @stamina = DEFAULT_CORE_STATS
     @stats = stats
     @level = DEFAULT_LEVEL
+    @xp = DEFAULT_XP
   end
 
   def dead?
