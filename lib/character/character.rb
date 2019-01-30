@@ -1,5 +1,11 @@
 class Character
-  DEFAULT_CORE_STATS = {
+  DEFAULT_HP = {
+    max: 100, current: 100
+  }
+  DEFAULT_MAGIC = {
+    max: 100, current: 100
+  }
+  DEFAULT_STAMINA = {
     max: 100, current: 100
   }
   DEFAULT_STATS = {
@@ -22,9 +28,9 @@ class Character
     @name = name
     @race = race
     @class = c_class
-    @hp = DEFAULT_CORE_STATS
-    @magic = DEFAULT_CORE_STATS
-    @stamina = DEFAULT_CORE_STATS
+    @hp = DEFAULT_HP
+    @magic = DEFAULT_MAGIC
+    @stamina = DEFAULT_STAMINA
     @stats = stats
     @level = DEFAULT_LEVEL
     @xp = DEFAULT_XP
@@ -43,6 +49,10 @@ class Character
       @level += DEFAULT_LEVEL
       @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
       @xp[:current] = ZERO
+      @hp[:max] += @stats[:const]/3 + @level
+      @hp[:current] = @hp[:max]
+      @magic[:max] += (@stats[:int]/3) + (@stats[:wis]/3)
+      @magic[:current] = @magic[:max]
     end
   end
 end
