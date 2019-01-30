@@ -70,6 +70,7 @@ describe Character do
     it 'should reach level 2 when max xp reached' do
       character = Character.new("Name", "Race", "Class")
       character.xp[:current] = 100
+      character.level_up
       expect(character.level).to eq 2
     end
   end
