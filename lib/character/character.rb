@@ -40,7 +40,7 @@ class Character
 
   def level_up
     if @xp[:current] == @xp[:max]
-      @level += 1
+      @level += DEFAULT_LEVEL
       @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
       @xp[:current] = RESET_TO_ZERO
     end
