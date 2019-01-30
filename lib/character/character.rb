@@ -1,13 +1,4 @@
 class Character
-  DEFAULT_HP = {
-    max: 100, current: 100
-  }
-  DEFAULT_MAGIC = {
-    max: 100, current: 100
-  }
-  DEFAULT_STAMINA = {
-    max: 100, current: 100
-  }
   DEFAULT_STATS = {
     str: 12, dex: 12, const: 12,
     char: 12, wis: 12, int: 12
@@ -47,12 +38,30 @@ class Character
 
   def level_up
     @level += DEFAULT_LEVEL
+    level_up_xp
+    level_up_hp
+    level_up_magic
+    level_up_stamina
+  end
+
+  private
+
+  def level_up_xp
     @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
     @xp[:current] = ZERO
+  end
+
+  def level_up_hp
     @hp[:max] += @stats[:const]/3 + @level
     @hp[:current] = @hp[:max]
+  end
+
+  def level_up_magic
     @magic[:max] += (@stats[:int]/3) + (@stats[:wis]/3)
     @magic[:current] = @magic[:max]
+  end
+
+  def level_up_stamina
     @stamina[:max] += @stats[:dex]/3 + @level
     @stamina[:current] = @stamina[:max]
   end
