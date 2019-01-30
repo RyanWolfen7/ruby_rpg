@@ -10,6 +10,8 @@ class Character
     max: 100, current: 0
   }
   DEFAULT_LEVEL = 1
+  LEVEL_UP_MODIFIER = 50
+  RESET_TO_ZERO = 0
 
 
   attr_reader :name, :race, :class,
@@ -39,8 +41,8 @@ class Character
   def level_up
     if @xp[:current] == @xp[:max]
       @level += 1
-      @xp[:max] += @xp[:max] + 50
-      @xp[:current] = 0
+      @xp[:max] += @xp[:max] + LEVEL_UP_MODIFIER
+      @xp[:current] = RESET_TO_ZERO
     end
   end
 end
