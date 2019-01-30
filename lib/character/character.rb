@@ -32,8 +32,15 @@ class Character
     @hp[:current] == 0
   end
 
-  def level_up
-    @level += 1 if @xp[:current] == @xp[:max]
+  def xp_gain(xp)
+    @xp[:current] += xp
   end
 
+  def level_up
+    if @xp[:current] == @xp[:max]
+      @level += 1
+      @xp[:max] += @xp[:max] + 50
+      @xp[:current] = 0
+    end
+  end
 end
