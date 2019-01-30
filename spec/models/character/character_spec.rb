@@ -42,4 +42,11 @@ describe Character do
     end
   end
 
+  describe '#dead?' do
+    it 'should return false' do
+      character = Character.new("Name", "Race", "Class")
+      expect(character.dead?).to eq false
+    end
+  end
+
 end
