@@ -47,10 +47,11 @@ class Character
   private
 
   def add_bonus(stats)
-    return stats unless @race.is_a?(Race)
+    return stats unless @race.is_a?(Race) && @class.is_a?(C_class)
     temp = Hash.new(0)
     stats.each {|key, count| temp[key] += count}
     @race.stat_bonus.each {|key, count| temp[key] += count}
+    @class.stat_bonus.each {|key, count| temp[key] += count}
     return temp
   end
 

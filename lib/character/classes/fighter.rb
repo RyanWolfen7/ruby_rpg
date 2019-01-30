@@ -5,6 +5,6 @@ class Fighter < C_class
 
   def initialize
     @name = "Fighter"
-    @stat_bonus = { str: 1, const: 1}
+    @stat_bonus = { str: 1, const: 1, dex: 1}
   end
 end
