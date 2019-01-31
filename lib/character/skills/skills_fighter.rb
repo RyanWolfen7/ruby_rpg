@@ -8,4 +8,8 @@ class Skills_fighters < Skills
       @list = []
     end
 
+    def simple_first_aid(target)
+      target[:current] += rand(3..5)
+    end
+
 end
