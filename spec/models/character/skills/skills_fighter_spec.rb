@@ -9,11 +9,18 @@ describe Skills_fighters do
   end
 
   describe '#simple_first_aid' do
-    it 'should return a random number between 3-5' do
+    it 'should return a random number 3' do
       fighter = Skills_fighters.new
       target = {max: 100, current: 90}
       allow(fighter).to receive(:rand).and_return(3)
       expect(fighter.simple_first_aid(target)).to eq 93
+    end
+
+    it 'should return a random number 5' do
+      fighter = Skills_fighters.new
+      target = {max: 100, current: 90}
+      allow(fighter).to receive(:rand).and_return(4)
+      expect(fighter.simple_first_aid(target)).to eq 94
     end
   end
 end
