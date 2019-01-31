@@ -7,4 +7,12 @@ describe Skills_fighters do
       expect(fighter.list).to eq []
     end
   end
+
+  describe '#simple_first_aid' do
+    it 'should return a random number between 3-5' do
+      fighter = Skills_fighters.new
+      allow(fighter.simple_first_aid).to receive(:rand).and_return(3)
+      expect(fighter.simple_first_aid).to eq 3
+    end
+  end
 end
