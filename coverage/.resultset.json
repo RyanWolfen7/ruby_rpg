@@ -391,12 +391,25 @@
         null,
         null
       ],
-      "/Users/san-di/projects/ruby_rpg/spec/models/character/skills_spec.rb": [
+      "/Users/san-di/projects/ruby_rpg/spec/models/character/skills/skills_fighter_spec.rb": [
         1,
         null,
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/san-di/projects/ruby_rpg/lib/character/skills/skills_fighter.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
         1,
         1,
         null,
@@ -411,8 +424,20 @@
         1,
         null,
         null
+      ],
+      "/Users/san-di/projects/ruby_rpg/spec/models/character/skills_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1548944242
+    "timestamp": 1548946260
   }
 }
