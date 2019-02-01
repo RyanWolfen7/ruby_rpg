@@ -12,7 +12,8 @@ class Skills_fighters < Skills
       target[:current] += rand(3..5)
     end
 
-    def front_kick(target_health)
+    def front_kick(target_health, target_status = {stun: 0})
       target_health[:current] -= rand(5)
+      target_status[:stun] += 3
     end
 end

@@ -91,5 +91,13 @@ describe Skills_fighters do
       fighter.front_kick(enemy)
       expect(enemy[:current]).to eq 95
     end
+
+    it 'should put enemy into stun for 3' do
+      fighter = Skills_fighters.new
+      enemy = {max: 100, current: 100}
+      enemy_status = {stun: 0}
+      fighter.front_kick(enemy, enemy_status)
+      expect(enemy_status[:stun]).to eq 3
+    end
   end
 end
