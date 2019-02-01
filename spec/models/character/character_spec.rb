@@ -115,4 +115,14 @@ describe Character do
     end
   end
 
+  describe '#attack' do
+    it 'should deal damage' do
+      character = Character.new("Name", "Race", "Class")
+      enemy = {max: 100, current:100}
+      character.attack(enemy)
+      allow(character.attack(enemy)).to receive(:rand).and_return(5)
+      expect(enemy[:current]).to eq 95
+    end
+  end
+
 end
