@@ -58,7 +58,7 @@ describe '###Feature Test###' do
         enemy = Character.new("enemy", Human.new, Fighter.new(Skills_fighters.new))
         allow(ryan.class.skills).to receive(:rand).and_return(5)
         ryan.class.skills.front_kick(enemy.hp, enemy.status)
-        allow(ryan.class.skills).to receive(:rand).and_return(5)
+        allow(enemy.class.skills).to receive(:rand).and_return(5)
         enemy.class.skills.simple_first_aid(enemy.hp)
         expect(enemy.hp[:current]).to eq 39
       end
