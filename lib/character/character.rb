@@ -6,6 +6,10 @@ class Character
   DEFAULT_XP = {
     max: 100, current: 0
   }
+  DEFAULT_STATUS = {
+    stun: 0, poison: 0, burn: 0, shock: 0,
+    blind: 0, silence: 0, slow: 0, curse: 0
+  }
   DEFAULT_LEVEL = 1
   LEVEL_UP_MODIFIER = 50
   ZERO = 0
@@ -13,7 +17,8 @@ class Character
 
   attr_reader :name, :race, :class,
               :hp, :magic, :stamina,
-              :stats, :level, :xp
+              :stats, :level, :xp,
+              :status
 
   def initialize(name, race, c_class, stats = DEFAULT_STATS)
     @name = name
@@ -25,6 +30,7 @@ class Character
     @stamina = { max: (@stats[:dex] * 3), current: (@stats[:dex] * 3) }
     @level = DEFAULT_LEVEL
     @xp = DEFAULT_XP
+    @status = DEFAULT_STATUS
   end
 
   def dead?
