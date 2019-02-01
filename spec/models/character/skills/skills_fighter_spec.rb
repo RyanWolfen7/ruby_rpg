@@ -38,12 +38,58 @@ describe Skills_fighters do
   end
 
   describe '#front_kick' do
+    it 'should deal 0 damage' do
+      fighter = Skills_fighters.new
+      enemy = {max: 100, current: 100}
+      enemy_status = nil
+      allow(fighter).to receive(:rand).and_return(0)
+      fighter.front_kick(enemy)
+      expect(enemy[:current]).to eq 100
+    end
+
     it 'should deal 1 damage' do
       fighter = Skills_fighters.new
-      enemy = { hp: {max: 100, current: 100}, effect: nil}
-      fighter.front_kick(enemy)
+      enemy = {max: 100, current: 100}
+      enemy_status = nil
       allow(fighter).to receive(:rand).and_return(1)
-      expect(enemy.hp[:current]).to eq 99
+      fighter.front_kick(enemy)
+      expect(enemy[:current]).to eq 99
+    end
+
+    it 'should deal 2 damage' do
+      fighter = Skills_fighters.new
+      enemy = {max: 100, current: 100}
+      enemy_status = nil
+      allow(fighter).to receive(:rand).and_return(2)
+      fighter.front_kick(enemy)
+      expect(enemy[:current]).to eq 98
+    end
+
+    it 'should deal 3 damage' do
+      fighter = Skills_fighters.new
+      enemy = {max: 100, current: 100}
+      enemy_status = nil
+      allow(fighter).to receive(:rand).and_return(3)
+      fighter.front_kick(enemy)
+      expect(enemy[:current]).to eq 97
+    end
+
+    it 'should deal 4 damage' do
+      fighter = Skills_fighters.new
+      enemy = {max: 100, current: 100}
+      enemy_status = nil
+      allow(fighter).to receive(:rand).and_return(4)
+      fighter.front_kick(enemy)
+      expect(enemy[:current]).to eq 96
+    end
+
+    it 'should deal 5 damage' do
+      fighter = Skills_fighters.new
+      enemy = {max: 100, current: 100}
+      enemy_status = nil
+      allow(fighter).to receive(:rand).and_return(5)
+      fighter.front_kick(enemy)
+      expect(enemy[:current]).to eq 95
     end
   end
 end
