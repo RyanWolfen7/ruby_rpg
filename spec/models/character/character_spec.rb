@@ -52,6 +52,15 @@ describe Character do
       expect(character.xp[:max]).to eq 100
       expect(character.xp[:current]).to eq 0
     end
+
+    it 'should have default status' do
+      character = Character.new("Name", "Race", "Class")
+      status = {
+        stun: 0, poison: 0, burn: 0, shock: 0,
+        blind: 0, silence: 0, slow: 0, curse: 0
+      }
+      expect(character.status).to eq status
+    end
   end
 
   describe '#dead?' do
