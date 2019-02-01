@@ -33,6 +33,10 @@ class Character
     @status = DEFAULT_STATUS
   end
 
+  def attack(target)
+    target[:current] -= rand(5)
+  end
+
   def dead?
     @hp[:current] == ZERO
   end
