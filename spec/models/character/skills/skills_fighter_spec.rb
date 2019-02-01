@@ -36,4 +36,14 @@ describe Skills_fighters do
       expect(fighter.simple_first_aid(target)).to_not eq (90)
     end
   end
+
+  describe '#front_kick' do
+    it 'should deal 1 damage' do
+      fighter = Skills_fighters.new
+      enemy = { hp: {max: 100, current: 100}, effect: nil}
+      fighter.front_kick(enemy)
+      allow(fighter).to receive(:rand).and_return(1)
+      expect(enemy.hp[:current]).to eq 99
+    end
+  end
 end

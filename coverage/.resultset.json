@@ -430,6 +430,16 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/san-di/projects/ruby_rpg/lib/character/skills/skills_fighter.rb": [
@@ -440,7 +450,7 @@
         1,
         null,
         1,
-        5,
+        6,
         null,
         null,
         1,
@@ -471,6 +481,6 @@
         null
       ]
     },
-    "timestamp": 1548983920
+    "timestamp": 1548987495
   }
 }
