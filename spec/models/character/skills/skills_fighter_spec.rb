@@ -29,5 +29,11 @@ describe Skills_fighters do
       allow(fighter).to receive(:rand).and_return(5)
       expect(fighter.simple_first_aid(target)).to eq 95
     end
+
+    it 'should return a random number ' do
+      fighter = Skills_fighters.new
+      target = {max: 100, current: 90}
+      expect(fighter.simple_first_aid(target)).to_not eq (90)
+    end
   end
 end
