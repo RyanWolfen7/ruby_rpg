@@ -1,8 +1,8 @@
 class Sword < Weapon
   attr_reader :handed
 
-  def intitialize
+  def initialize
     @handed = nil
-    @type = 'sword'
+    @type = "sword"
   end
 end
