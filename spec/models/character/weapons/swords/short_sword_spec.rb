@@ -19,5 +19,10 @@ describe Short_sword do
       shorty = Short_sword.new('Dawn Breaker')
       expect(shorty.unique_name).to eq 'Dawn Breaker'
     end
+
+    it 'should have a reach of 3' do
+      shorty = Short_sword.new
+      expect(shorty.reach).to eq 3
+    end
   end
 end
