@@ -33,8 +33,8 @@ class Character
     @status = DEFAULT_STATUS
   end
 
-  def attack(target)
-    target[:current] -= rand(5)
+  def attack(target, weapon = 0)
+    target[:current] -= rand(5) + weapon
   end
 
   def dead?
