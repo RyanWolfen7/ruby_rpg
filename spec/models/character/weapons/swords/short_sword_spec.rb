@@ -24,5 +24,10 @@ describe Short_sword do
       shorty = Short_sword.new
       expect(shorty.reach).to eq 3
     end
+
+    it 'should be one handed' do
+      shorty = Short_sword.new
+      expect(shorty.handed).to eq 1
+    end
   end
 end
