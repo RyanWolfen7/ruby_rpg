@@ -1,8 +1,8 @@
 class Short_sword < Sword
 
-  def initialize
+  def initialize(unique_name = nil)
     @name = "Short Sword"
-    @unique_name = nil
+    @unique_name = unique_name
   end
 
 end
