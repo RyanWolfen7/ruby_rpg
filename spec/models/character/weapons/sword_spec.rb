@@ -17,10 +17,9 @@ describe Sword do
       sword = Sword.new
       expect(sword.handed).to eq nil
     end
-
     it 'should have a type sword' do
       sword = Sword.new
-      expect(sword.type).to eq 'sword'
+      expect(sword.type).to eq "sword"
     end
   end
 end
