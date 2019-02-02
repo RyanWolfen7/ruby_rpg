@@ -1,9 +1,8 @@
 require './lib/character/weapons/sword.rb'
 
 describe Sword do
-  describe Sword do
-    it { expect(described_class).to be < Weapon }
-  end
+  it { expect(described_class).to be < Weapon }
+
 
   describe '#initialize' do
     it 'should inherit name' do
