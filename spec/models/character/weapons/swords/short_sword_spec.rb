@@ -29,5 +29,11 @@ describe Short_sword do
       shorty = Short_sword.new
       expect(shorty.handed).to eq 1
     end
+
+    it 'should be type sword' do
+      shorty = Short_sword.new
+      p shorty
+      expect(shorty.type).to eq 'sword'
+    end
   end
 end
