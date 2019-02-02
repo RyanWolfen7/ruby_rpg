@@ -10,5 +10,9 @@ describe Weapon do
       weapon = Weapon.new
       expect(weapon.reach).to eq nil
     end
+    it 'should hold a nil unique_name' do
+      weapon = Weapon.new
+      expect(weapon.unique_name).to eq nil
+    end
   end
 end
