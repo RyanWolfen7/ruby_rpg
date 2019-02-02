@@ -8,4 +8,7 @@ class Short_sword < Sword
     @type = 'sword'
   end
 
+  def damage
+    rand(1..6)
+  end
 end
