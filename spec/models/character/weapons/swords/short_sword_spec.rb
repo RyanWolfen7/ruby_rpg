@@ -42,5 +42,35 @@ describe Short_sword do
       allow(shorty).to receive(:rand).and_return(6)
       expect(shorty.damage).to eq 6
     end
+
+    it 'should do a random damage of 5' do
+      shorty = Short_sword.new
+      allow(shorty).to receive(:rand).and_return(5)
+      expect(shorty.damage).to eq 5
+    end
+
+    it 'should do a random damage of 4' do
+      shorty = Short_sword.new
+      allow(shorty).to receive(:rand).and_return(4)
+      expect(shorty.damage).to eq 4
+    end
+
+    it 'should do a random damage of 3' do
+      shorty = Short_sword.new
+      allow(shorty).to receive(:rand).and_return(3)
+      expect(shorty.damage).to eq 3
+    end
+
+    it 'should do a random damage of 2' do
+      shorty = Short_sword.new
+      allow(shorty).to receive(:rand).and_return(2)
+      expect(shorty.damage).to eq 2
+    end
+
+    it 'should do a random damage of 1' do
+      shorty = Short_sword.new
+      allow(shorty).to receive(:rand).and_return(1)
+      expect(shorty.damage).to eq 1
+    end
   end
 end
