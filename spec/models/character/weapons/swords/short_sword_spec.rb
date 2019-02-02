@@ -32,8 +32,14 @@ describe Short_sword do
 
     it 'should be type sword' do
       shorty = Short_sword.new
-      p shorty
       expect(shorty.type).to eq 'sword'
+    end
+  end
+
+  describe '#damage' do
+    it 'should do a random damage of 6' do
+      shorty = Short_sword.new
+      expect(shorty.damage).to eq 6
     end
   end
 end
