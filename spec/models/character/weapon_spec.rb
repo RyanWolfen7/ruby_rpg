@@ -6,5 +6,9 @@ describe Weapon do
       weapon = Weapon.new
       expect(weapon.name).to eq nil
     end
+    it 'should hold a nil reach' do
+      weapon = Weapon.new
+      expect(weapon.reach).to eq nil
+    end
   end
 end
