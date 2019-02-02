@@ -62,6 +62,24 @@ describe '###Feature Test###' do
         enemy.class.skills.simple_first_aid(enemy.hp)
         expect(enemy.hp[:current]).to eq 39
       end
+
+      it 'should be able to attack with no weapon' do
+        ryan = Character.new("Ryan", Human.new, Fighter.new(Skills_fighters.new))
+        enemy = Character.new("enemy", Human.new, Fighter.new(Skills_fighters.new))
+        allow(ryan).to receive(:rand).and_return(5)
+        ryan.attack(enemy.hp)
+        expect(enemy.hp[:current]).to eq 34
+      end
+
+      it 'should be able to attack with a weapon' do
+        ryan = Character.new("Ryan", Human.new, Fighter.new(Skills_fighters.new))
+        enemy = Character.new("enemy", Human.new, Fighter.new(Skills_fighters.new))
+        sword = Short_sword.new
+        allow(ryan).to receive(:rand).and_return(5)
+        allow(sword).to receive(:rand).and_return(5)
+        ryan.attack(enemy.hp,sword.damage)
+        expect(enemy.hp[:current]).to eq 29
+      end
     end
   end
 end
