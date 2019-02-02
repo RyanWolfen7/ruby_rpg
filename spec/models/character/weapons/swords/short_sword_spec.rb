@@ -14,5 +14,10 @@ describe Short_sword do
       shorty = Short_sword.new
       expect(shorty.unique_name).to eq nil
     end
+
+    it 'should be able to init a unique name' do
+      shorty = Short_sword.new('Dawn Breaker')
+      expect(shorty.unique_name).to eq 'Dawn Breaker'
+    end
   end
 end
