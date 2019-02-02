@@ -9,5 +9,10 @@ describe Short_sword do
       shorty = Short_sword.new
       expect(shorty.name).to eq "Short Sword"
     end
+
+    it 'should have the nil unique name' do
+      shorty = Short_sword.new
+      expect(shorty.unique_name).to eq nil
+    end
   end
 end
