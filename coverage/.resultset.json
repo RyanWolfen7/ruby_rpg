@@ -646,7 +646,6 @@
         1,
         1,
         1,
-        1,
         null,
         null,
         null
@@ -694,21 +693,28 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/san-di/projects/ruby_rpg/lib/character/weapons/swords/short_sword.rb": [
         1,
         null,
         1,
-        5,
-        5,
-        5,
-        5,
+        6,
+        6,
+        6,
+        6,
+        6,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1549131105
+    "timestamp": 1549131415
   }
 }
