@@ -39,6 +39,7 @@ describe Short_sword do
   describe '#damage' do
     it 'should do a random damage of 6' do
       shorty = Short_sword.new
+      allow(shorty).to receive(:rand).and_return(6)
       expect(shorty.damage).to eq 6
     end
   end
