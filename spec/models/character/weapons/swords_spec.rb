@@ -4,7 +4,7 @@ describe Sword < Weapon do
   describe '#initialize' do
     it 'should have a handed' do
       sword = Sword.new
-      expect(sword).to include @handed
+      expect(sword.handed).to eq nil
     end
   end
 end
