@@ -31,7 +31,7 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
   - Character.new(name, race, c_class, stats)
   ```
   // example
-  NEW_CHAR = Character.new('ENTER_NAME', Human.new,        Fighter.new(Skills_fighters.new), stats)
+  NEW_CHAR = Character.new('ENTER_NAME', Human.new, Fighter.new(Skills_fighters.new), stats)
   ```
   - Actions
     - dead? : checks if hp[:current] = 0
