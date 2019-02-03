@@ -81,3 +81,8 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
       - Short_sword
         - 1h
         - 1d6
+      - Long_sword
+        - 1/2h
+        - 1d8
+        - switch_to_one_handed
+        - switch_to_two_handed
