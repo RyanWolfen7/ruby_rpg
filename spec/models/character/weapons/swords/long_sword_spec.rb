@@ -12,6 +12,10 @@ describe Long_sword do
       ls = Long_sword.new('Ublaaa')
       expect(ls.unique_name).to eq 'Ublaaa'
     end
+    it 'should have a reach of 4' do
+      ls = Long_sword.new
+      expect(ls.reach).to eq 4
+    end
     it 'should have a 2 for handed' do
       ls = Long_sword.new
       expect(ls.handed).to eq 2
