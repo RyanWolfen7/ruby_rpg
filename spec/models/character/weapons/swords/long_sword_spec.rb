@@ -8,5 +8,9 @@ describe Long_sword do
       ls = Long_sword.new
       expect(ls.name).to eq 'Long Sword'
     end
+    it 'should have a unique name name long sword' do
+      ls = Long_sword.new('Ublaaa')
+      expect(ls.unique_name).to eq 'Ublaaa'
+    end
   end
 end
