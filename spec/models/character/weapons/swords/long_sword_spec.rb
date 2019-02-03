@@ -43,4 +43,12 @@ describe Long_sword do
       expect(ls.handed).to eq 2
     end
   end
+
+  describe '#damage' do
+    it 'should return a random number' do
+      ls = Long_sword.new
+      allow(ls).to receive(:rand).and_return(8)
+      expect(ls.damage).to eq 8
+    end
+  end
 end
