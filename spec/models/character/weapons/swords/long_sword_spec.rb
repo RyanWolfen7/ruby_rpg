@@ -20,5 +20,9 @@ describe Long_sword do
       ls = Long_sword.new
       expect(ls.handed).to eq 2
     end
+    it 'should be type sword' do
+      ls = Long_sword.new
+      expect(ls.type).to eq 'sword'
+    end
   end
 end
