@@ -79,4 +79,5 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
     #### Current Weapons
     - Swords
       - Short_sword
+        - 1h
         - 1d6
