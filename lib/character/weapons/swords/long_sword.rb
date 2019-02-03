@@ -5,5 +5,6 @@ class Long_sword < Sword
     @unique_name = unique_name
     @reach = 4
     @handed = 2
+    @type = 'sword'
   end
 end
