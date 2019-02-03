@@ -7,4 +7,8 @@ class Long_sword < Sword
     @handed = 2
     @type = 'sword'
   end
+
+  def switch_to_one_handed
+    @handed = 1
+  end
 end
