@@ -11,4 +11,8 @@ class Long_sword < Sword
   def switch_to_one_handed
     @handed = 1
   end
+
+  def switch_to_two_handed
+    @handed = 2
+  end
 end
