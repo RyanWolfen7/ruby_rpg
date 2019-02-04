@@ -68,8 +68,8 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
   //example
   dead = Dead.new
   destroyed = Dead.new
-  dead.dead?(ryan.hp)
-  destroyed.dead?(box.condition)
+  dead.true?(ryan.hp)
+  destroyed.true?(box.condition)
   ```
 
 #### Attack
