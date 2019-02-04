@@ -36,13 +36,7 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
   - Actions
     - xp_gain(xp) : adds to xp[:current]
     - level_up : goes to next level and increases xp[:max]
-    - attack(target, weapon.damage) : attacks target .hp
-    ```
-    // example
-    NEW_CHAR.attack(enemy.hp, short_sword.damage)
-    or
-    NEW_CHAR.attack(enemy.hp) // For unarmed attack
-    ```
+
 #### Class Creation
   Classes are the arch class of the skills that a character can use. They must be initialized with the class and corresponding skill file. Once created they can be passed to a character. Class < Fighter
   - Fighter.new(Skills_fighters.new)
@@ -76,6 +70,17 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
   destroyed = Dead.new
   dead.dead?(ryan.hp)
   destroyed.dead?(box.condition)
+  ```
+
+#### Attack
+  the attack class can be used with anything and doesn't need to be specific in any way.
+  - attack.damage(target, weapon.damage) : attacks target .hp
+  ```
+  // example
+  char_atk = Attack.new
+  char_atk.attack(enemy.hp, short_sword.damage)
+  or
+  char_atk.attack(enemy.hp) // For unarmed attack
   ```
 
 #### Current Classes
