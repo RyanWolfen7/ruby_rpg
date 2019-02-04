@@ -29,7 +29,7 @@ describe Long_sword do
   describe '#switch_to_one_handed' do
     it 'should switch to one handed' do
       ls = Long_sword.new
-      ls.switch_to_one_handed
+      ls.switch_handed
       expect(ls.handed).to eq 1
     end
   end
@@ -37,9 +37,9 @@ describe Long_sword do
   describe '#switch_to_two_handed' do
     it 'should switch to two hands' do
       ls = Long_sword.new
-      ls.switch_to_one_handed
+      ls.switch_handed
       expect(ls.handed).to eq 1
-      ls.switch_to_two_handed
+      ls.switch_handed
       expect(ls.handed).to eq 2
     end
   end

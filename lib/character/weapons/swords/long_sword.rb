@@ -12,11 +12,7 @@ class Long_sword < Sword
     rand(1..8)
   end
 
-  def switch_to_one_handed
-    @handed = 1
-  end
-
-  def switch_to_two_handed
-    @handed = 2
+  def switch_handed
+    @handed == 2 ? @handed = 1 : @handed = 2
   end
 end
