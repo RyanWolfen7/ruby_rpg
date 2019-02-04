@@ -1,3 +1,5 @@
+require 'lib/core/dead?.rb'
+
 describe Dead? do
   describe '#initialize' do
     it 'should return false' do
