@@ -1,5 +1,6 @@
 require './lib/character/character.rb'
 require './lib/character/races/human.rb'
+require './lib/core/dead.rb'
 
 describe '###Feature Test###' do
   describe '#RACE#' do
@@ -80,6 +81,41 @@ describe '###Feature Test###' do
         ryan.attack(enemy.hp,sword.damage)
         expect(enemy.hp[:current]).to eq 29
       end
+    end
+  end
+
+  describe '#dead' do
+    it 'should return true when enemy dies' do
+      ryan = Character.new("Ryan", Human.new, Fighter.new(Skills_fighters.new))
+      enemy = Character.new("enemy", Human.new, Fighter.new(Skills_fighters.new))
+      sword = Short_sword.new
+      dead = Dead.new
+      allow(ryan).to receive(:rand).and_return(5)
+      allow(sword).to receive(:rand).and_return(34)
+      ryan.attack(enemy.hp,sword.damage)
+      expect(dead.true?(enemy.hp)).to eq true
+    end
+
+    it 'should return false when enemy hit' do
+      ryan = Character.new("Ryan", Human.new, Fighter.new(Skills_fighters.new))
+      enemy = Character.new("enemy", Human.new, Fighter.new(Skills_fighters.new))
+      sword = Short_sword.new
+      dead = Dead.new
+      allow(ryan).to receive(:rand).and_return(5)
+      allow(sword).to receive(:rand).and_return(33)
+      ryan.attack(enemy.hp,sword.damage)
+      expect(dead.true?(enemy.hp)).to eq false
+    end
+
+    it 'check if enemy can be over killed' do
+      ryan = Character.new("Ryan", Human.new, Fighter.new(Skills_fighters.new))
+      enemy = Character.new("enemy", Human.new, Fighter.new(Skills_fighters.new))
+      sword = Short_sword.new
+      dead = Dead.new
+      allow(ryan).to receive(:rand).and_return(5)
+      allow(sword).to receive(:rand).and_return(134)
+      ryan.attack(enemy.hp,sword.damage)
+      expect(dead.true?(enemy.hp)).to eq true
     end
   end
 end
