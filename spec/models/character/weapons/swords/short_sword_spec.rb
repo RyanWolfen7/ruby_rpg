@@ -11,6 +11,10 @@ describe Short_sword do
       expect(shorty.name).to eq "Short Sword"
     end
 
+    it 'should have a switchable of false' do
+      expect(shorty.switchable).to eq false
+    end
+
     it 'should have the nil unique name' do
       expect(shorty.unique_name).to eq nil
     end

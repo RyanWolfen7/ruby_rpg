@@ -20,6 +20,11 @@ describe Long_sword do
     it 'should have a 2 for handed' do
       expect(ls.handed).to eq 2
     end
+
+    it 'should have a switchable of true' do
+      expect(shorty.switchable).to eq true
+    end
+
     it 'should be type sword' do
       expect(ls.type).to eq 'sword'
     end
