@@ -5,6 +5,7 @@ class Short_sword < Sword
     @unique_name = unique_name
     @reach = 3
     @handed = 1
+    @switchable = false
     @type = 'sword'
   end
 
