@@ -32,11 +32,7 @@ class Character
     @xp = DEFAULT_XP
     @status = DEFAULT_STATUS
   end
-
-  def attack(target, weapon = 0)
-    target[:current] -= rand(5) + weapon
-  end
-
+  
   def xp_gain(xp)
     @xp[:current] += xp
     self.level_up if @xp[:current] == @xp[:max]
