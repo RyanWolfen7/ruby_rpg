@@ -13,5 +13,11 @@ describe Dead do
       dead = Dead.new
       expect(dead.true?(hp)).to eq true
     end
+
+    it 'should return true if over killed' do
+      hp = {max: 100, current: -14}
+      dead = Dead.new
+      expect(dead.true?(hp)).to eq true
+    end
   end
 end
