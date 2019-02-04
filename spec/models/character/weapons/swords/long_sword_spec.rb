@@ -25,22 +25,6 @@ describe Long_sword do
     end
   end
 
-  describe '#switch_to_one_handed' do
-    it 'should switch to one handed' do
-      ls.switch_handed
-      expect(ls.handed).to eq 1
-    end
-  end
-
-  describe '#switch_to_two_handed' do
-    it 'should switch to two hands' do
-      ls.switch_handed
-      expect(ls.handed).to eq 1
-      ls.switch_handed
-      expect(ls.handed).to eq 2
-    end
-  end
-
   describe '#damage' do
     it 'should return a random number' do
       allow(ls).to receive(:rand).and_return(8)
