@@ -22,7 +22,7 @@ describe Long_sword do
     end
 
     it 'should have a switchable of true' do
-      expect(shorty.switchable).to eq true
+      expect(ls.switchable).to eq true
     end
 
     it 'should be type sword' do
