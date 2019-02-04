@@ -11,8 +11,4 @@ class Long_sword < Sword
   def damage
     rand(1..8)
   end
-
-  def switch_handed
-    @handed == 2 ? @handed = 1 : @handed = 2
-  end
 end
