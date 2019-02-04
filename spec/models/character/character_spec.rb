@@ -59,19 +59,6 @@ describe Character do
     end
   end
 
-  describe '#dead?' do
-    it 'should return false' do
-      character = Character.new("Name", "Race", "Class")
-      expect(character.dead?).to eq false
-    end
-
-    it 'should return true' do
-      character = Character.new("Name", "Race", "Class")
-      character.hp[:current] = 0
-      expect(character.dead?).to eq true
-    end
-  end
-
   describe '#level_up' do
     it 'should reach level 2 when max xp reached' do
       character = Character.new("Name", "Race", "Class")
