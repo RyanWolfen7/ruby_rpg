@@ -37,10 +37,6 @@ class Character
     target[:current] -= rand(5) + weapon
   end
 
-  def dead?
-    @hp[:current] == ZERO
-  end
-
   def xp_gain(xp)
     @xp[:current] += xp
     self.level_up if @xp[:current] == @xp[:max]
