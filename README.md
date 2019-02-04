@@ -82,7 +82,14 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
   or
   char_atk.attack(enemy.hp) // For unarmed attack
   ```
-
+#### Switch_handed
+  switch handed checks weapon boolians if they are switchable and changes the hand
+  - switch_handed.switch(weapon.switchable, weapon.handed)
+  ```
+  // example
+  switch_hand = Switch_handed.new
+  switch_hand.switch(weapon.switchable, weapon.handed)
+  ```
 #### Current Classes
   - Fighter
     - +1 to str, dex, const
