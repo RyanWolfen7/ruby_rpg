@@ -33,7 +33,7 @@ describe Great_sword do
     end
 
     it 'should be type sword' do
-      expect(gs.unique_name).to eq 'sword'
+      expect(gs.type).to eq 'sword'
     end
   end
 
