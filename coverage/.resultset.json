@@ -659,8 +659,8 @@
         1,
         null,
         1,
-        10,
-        10,
+        4,
+        4,
         null,
         null
       ],
@@ -671,7 +671,7 @@
         2,
         2,
         null,
-        7,
+        8,
         null,
         1,
         1,
@@ -683,10 +683,6 @@
         null,
         null,
         1,
-        1,
-        0,
-        null,
-        null,
         1,
         1,
         null,
@@ -702,12 +698,33 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
         null
       ],
       "/Users/san-di/projects/ruby_rpg/lib/character/weapons/swords/great_sword.rb": [
+        1,
+        1,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        null,
+        null,
+        1,
         1,
         null,
         null,
@@ -919,6 +936,6 @@
         null
       ]
     },
-    "timestamp": 1549385188
+    "timestamp": 1549385805
   }
 }
