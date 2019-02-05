@@ -105,7 +105,22 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
     - Short_sword
       - 1h
       - 1d6
-  - Long_sword
+      - reach 3
+    - Long_sword
       - 1/2h
-      - 1d8
-      - switch_handed
+      - 1d8 1h
+      - 2d6 2h
+      - reach 4
+    - Bastard_sword
+      - 1/2h
+      - 1d8 1h
+      - 2d8 2h
+      - reach 5
+    - Two_handed_sword
+      - 2h
+      - 2d8
+      - reach 6
+    - Great_sword
+      - 2h
+      - 2d10
+      - reach 8
