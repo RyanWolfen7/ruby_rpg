@@ -36,6 +36,12 @@ describe Great_sword do
       expect(gs.type).to eq 'sword'
     end
   end
-
+  describe '#damage' do
+    it 'should return 20' do
+      allow(gs).to receive(:rand).and_return(10)
+      allow(gs).to receive(:rand).and_return(10)
+      expect(gs.damage).to eq 20
+    end
+  end
 
 end
