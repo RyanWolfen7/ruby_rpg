@@ -40,7 +40,7 @@ describe Two_handed_sword do
     it 'should return 20' do
       allow(gs).to receive(:rand).and_return(8)
       allow(gs).to receive(:rand).and_return(8)
-      expect(gs.damage).to eq 20
+      expect(gs.damage).to eq 16
     end
   end
 
