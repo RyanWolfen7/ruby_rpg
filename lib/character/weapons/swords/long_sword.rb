@@ -10,6 +10,7 @@ class Long_sword < Sword
   end
 
   def damage
-    rand(1..8)
+    return rand(1..8) if @handed == 1
+    return rand(1..6) + rand(1..6) if @handed == 2
   end
 end

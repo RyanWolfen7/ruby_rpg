@@ -1,5 +1,5 @@
 class Sword < Weapon
-  attr_reader :handed
+  attr_accessor :handed
 
   def initialize
     @handed = nil

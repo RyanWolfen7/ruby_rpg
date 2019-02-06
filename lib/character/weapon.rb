@@ -1,6 +1,6 @@
 class Weapon
 
-  attr_reader :name, :reach, :unique_name, :type, :switchable
+  attr_accessor :name, :reach, :unique_name, :type, :switchable
 
   def initialize
     @name = nil
