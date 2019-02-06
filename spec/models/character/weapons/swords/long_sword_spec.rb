@@ -1,3 +1,5 @@
+require './lib/character/weapon.rb'
+require './lib/character/weapons/sword.rb'
 require './lib/character/weapons/swords/long_sword.rb'
 
 describe Long_sword do
@@ -31,9 +33,14 @@ describe Long_sword do
   end
 
   describe '#damage' do
-    it 'should return a random number' do
+    it 'should return a random number one handed' do
+      ls.handed = 1
       allow(ls).to receive(:rand).and_return(8)
       expect(ls.damage).to eq 8
+    end
+    it 'should return a random number two handed' do
+      allow(ls).to receive(:rand).and_return(6)
+      expect(ls.damage).to eq 12
     end
   end
 end
