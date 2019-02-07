@@ -25,8 +25,12 @@ describe Human do
     end
   end
 
-  describe '#race_modifiers' do
-    expect(race.race_modifiers).to
-    eq {health: 0, magic: 0, stamina: 10, xp: -20}
+  describe '#core_modifiers' do
+    let(:race) {Human.new}
+    let(:modifier) { {health: 0, magic: 0, stamina: 0, xp: -20} }
+
+    it 'is expected to return core modifier hash' do
+      expect(race.core_modifiers).to eq modifier
+    end
   end
 end
