@@ -9,7 +9,7 @@ describe '###Feature Test###' do
 
   describe '#RACE#' do
     describe 'Human' do
-      let(:character) {Character.new("Ryan", Human.new, Fighter.new)}
+      let(:character) {Character.new("Ryan", Human.new, Fighter.new(Skills_fighters))}
 
       it 'should load a race and be able to be called' do
         stat_bonus = { char: 2, int: 2}
