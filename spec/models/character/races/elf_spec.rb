@@ -12,5 +12,14 @@ describe Elf do
     it 'has name of elf' do
       expect(elf.name).to eq 'Elf'
     end
+
+    it 'should have subrace' do
+      elf = Elf.new('test')
+      expect(elf.name).to eq 'test'
+    end
+
+    it 'has name of elf' do
+      expect(elf.bonus).to eq status
+    end
   end
 end
