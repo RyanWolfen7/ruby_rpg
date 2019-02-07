@@ -8,7 +8,6 @@ class Human < Race
     @name = "Human"
     @sub_race = sub_race
     @stat_bonus = { char: 2, int: 2}
-    @core_modifiers = {}
   end
 
   def core_modifiers

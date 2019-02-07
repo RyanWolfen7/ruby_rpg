@@ -22,9 +22,9 @@ class Character
 
   def initialize(name, race, c_class, stats = DEFAULT_STATS)
     @name = name
-    @race = race
+    @race = add_race_bonus(race)
     @class = c_class
-    @stats = add_bonus(stats)
+    @stats = add_stat_bonus(stats)
     @hp = { max: (@stats[:const] * 3), current: (@stats[:const] * 3) }
     @magic = { max: (@stats[:int] + @stats[:wis]), current: (@stats[:int] + @stats[:wis]) }
     @stamina = { max: (@stats[:dex] * 3), current: (@stats[:dex] * 3) }
@@ -48,13 +48,17 @@ class Character
 
   private
 
-  def add_bonus(stats)
+  def add_stat_bonus(stats)
     return stats unless @race.is_a?(Race) && @class.is_a?(C_class)
     temp = Hash.new(0)
     stats.each {|key, count| temp[key] += count}
     @race.stat_bonus.each {|key, count| temp[key] += count}
     @class.stat_bonus.each {|key, count| temp[key] += count}
     return temp
+  end
+
+  def add_race_bonus(race)
+    return race unless @race.is_a?(Race)
   end
 
   def level_up_xp
