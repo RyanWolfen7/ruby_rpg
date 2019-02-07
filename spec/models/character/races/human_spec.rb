@@ -5,6 +5,8 @@ describe Human do
 
     let(:race) {Human.new}
     let(:bonus) {{char: 2, int: 2}}
+
+
     it 'should initialize modifiers' do
       expect(race.stat_bonus).to eq bonus
     end
@@ -21,5 +23,10 @@ describe Human do
     it 'should default to Standard if no param given' do
       expect(race.sub_race).to eq "Standard"
     end
+  end
+
+  describe '#race_modifiers' do
+    expect(race.race_modifiers).to
+    eq {health: 0, magic: 0, stamina: 10, xp: -20}
   end
 end
