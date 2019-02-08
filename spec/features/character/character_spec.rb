@@ -39,6 +39,17 @@ describe '###Feature Test###' do
         expect(character.race.sub_race).to eq "Standard"
         expect(character.race.stat_bonus).to eq stat_bonus
       end
+
+      it 'should add the elf race bonus to character' do
+        expect(character.stats[:wis]).to eq 14
+        expect(character.stats[:int]).to eq 14
+      end
+
+      it 'should add the core_modifiers to human' do
+        expect(character.hp[:max]).to eq 44
+        expect(character.magic[:max]).to eq 38
+        expect(character.xp[:max]).to eq 115
+      end
     end
   end
 

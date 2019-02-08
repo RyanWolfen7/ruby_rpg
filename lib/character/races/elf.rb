@@ -7,7 +7,7 @@ class Elf < Race
   end
 
   def core_modifiers
-    modifier = { health: 5, magic: 10, stamina: 0, xp: +15}
+    modifier = { health: 5, magic: 15, stamina: 0, xp: 20}
   end
 
 end
