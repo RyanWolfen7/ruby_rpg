@@ -22,14 +22,14 @@ class Character
 
   def initialize(name, race, c_class, stats = DEFAULT_STATS)
     @name = name
-    @race = add_race_bonus(race)
+    @race = race
     @class = c_class
     @stats = add_stat_bonus(stats)
-    @hp = { max: (@stats[:const] * 3), current: (@stats[:const] * 3) }
-    @magic = { max: (@stats[:int] + @stats[:wis]), current: (@stats[:int] + @stats[:wis]) }
-    @stamina = { max: (@stats[:dex] * 3), current: (@stats[:dex] * 3) }
+    @hp = add_hp
+    @magic = add_magic
+    @stamina = add_stamina
+    @xp = add_xp
     @level = DEFAULT_LEVEL
-    @xp = DEFAULT_XP
     @status = DEFAULT_STATUS
   end
 
@@ -57,8 +57,51 @@ class Character
     return temp
   end
 
-  def add_race_bonus(race)
-    return race unless @race.is_a?(Race)
+  def add_hp
+    health = { max: (@stats[:const] * 3), current: (@stats[:const] * 3)}
+    return health unless @race.is_a?(Race) && @class.is_a?(C_class)
+    num = 0
+    @race.core_modifiers.each {|key, count|
+      if key == :health
+        num = count + health[:max] if key == :health
+      end
+    }
+    return {max: num, current: num}
+  end
+
+  def add_magic
+    magic = {
+      max: (@stats[:int] + @stats[:wis]),
+      current: (@stats[:int] + @stats[:wis])
+    }
+    return magic unless @race.is_a?(Race) && @class.is_a?(C_class)
+    num = 0
+    @race.core_modifiers.each {|key, count|
+      if key == :magic
+        num = count + magic[:max] if key == :magic
+     end
+    }
+    return {max: num, current: num}
+  end
+
+  def add_stamina
+    stamina = {max: (@stats[:dex] * 3), current: (@stats[:dex] * 3)}
+    return stamina unless @race.is_a?(Race) && @class.is_a?(C_class)
+    num = 0
+    @race.core_modifiers.each {|key, count|
+      num = count + stamina[:max] if key == :stamina
+    }
+    return {max: num, current: num}
+  end
+
+  def add_xp
+    xp = DEFAULT_XP
+    return xp unless @race.is_a?(Race) && @class.is_a?(C_class)
+    num = 0
+    @race.core_modifiers.each do |key, count|
+      num = count + 100 if key == :xp
+    end
+    return {max: num, current: 0}
   end
 
   def level_up_xp
