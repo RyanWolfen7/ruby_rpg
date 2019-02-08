@@ -22,4 +22,13 @@ describe Elf do
       expect(elf.stat_bonus).to eq stats
     end
   end
+
+  describe '#core_modifiers' do
+    let(:race) {Elf.new}
+    let(:modifier) { {health: 5, magic: 10, stamina: 0, xp: 15} }
+
+    it 'is expected to return core modifier hash' do
+      expect(race.core_modifiers).to eq modifier
+    end
+  end
 end
