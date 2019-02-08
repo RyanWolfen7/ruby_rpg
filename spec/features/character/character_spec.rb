@@ -47,8 +47,8 @@ describe '###Feature Test###' do
 
       it 'should add the core_modifiers to human' do
         expect(character.hp[:max]).to eq 44
-        expect(character.magic[:max]).to eq 38
-        expect(character.xp[:max]).to eq 115
+        expect(character.magic[:max]).to eq 43
+        expect(character.xp[:max]).to eq 120
       end
     end
   end
