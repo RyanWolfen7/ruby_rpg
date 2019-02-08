@@ -100,6 +100,12 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
 #### Current Races
     - Human
       - +1 int, char
+      - 20% less xp required for lvl up
+    - Elf
+      - +1 wis, int
+      - +5 Health
+      - +10 Magic
+      - 15% more required xp
 
 #### Current Weapons
   - Swords
