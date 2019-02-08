@@ -10,12 +10,12 @@ describe Stat_gen do
 
     it 'should respond to min rand' do
       allow(gen).to receive(:rand).and_return(24)
-      expect(gen.stat_gen).to eq 24
+      expect(gen.points).to eq 24
     end
 
     it 'should respond to min rand' do
       allow(gen).to receive(:rand).and_return(34)
-      expect(gen.stat_gen).to eq 38
+      expect(gen.points).to eq 38
     end
   end
 end
