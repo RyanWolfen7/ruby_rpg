@@ -104,8 +104,8 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
     - Elf
       - +1 wis, int
       - +5 Health
-      - +10 Magic
-      - 15% more required xp
+      - +15 Magic
+      - 20% more xp required for lvl up
 
 #### Current Weapons
   - Swords
