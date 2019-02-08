@@ -6,4 +6,8 @@ class Elf < Race
     @stat_bonus = {wis: 2, int:2}
   end
 
+  def core_modifiers
+    modifier = { health: 5, magic: 10, stamina: 0, xp: +15}
+  end
+
 end
