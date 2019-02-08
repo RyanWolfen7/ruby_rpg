@@ -9,12 +9,7 @@ class Stat_gen
 
   def initialize
     @stats = DEFAULT_STATS
-    @points = Integer
-    points_cal
-  end
-
-  def points_cal
-    @points = rand(24..38)
+    @points = Kernel.rand(24..38)
   end
 
   def add(stat)

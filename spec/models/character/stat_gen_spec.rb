@@ -17,19 +17,19 @@ describe Stat_gen do
     end
 
     it 'should respond to min rand' do
-      allow(gen).to receive(:rand).and_return(24)
-      expect(gen.points_cal).to eq 24
+      allow(Kernel).to receive(:rand).and_return(24)
+      expect(gen.points).to eq 24
     end
 
     it 'should respond to min rand' do
-      allow(gen).to receive(:rand).and_return(38)
-      expect(gen.points_cal).to eq 38
+      allow(Kernel).to receive(:rand).and_return(38)
+      expect(gen.points).to eq 38
     end
   end
 
   describe '#add' do
     it 'should add 1 to strength and minues one point' do
-      allow(gen).to receive(:rand).and_return(24)
+      allow(Kernel).to receive(:rand).and_return(24)
       gen.add({str: 1})
       expect(gen.stats[:str]).to eq 13
       expect(gen.points).to eq 23
