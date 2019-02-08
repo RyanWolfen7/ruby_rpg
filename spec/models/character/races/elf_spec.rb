@@ -19,7 +19,7 @@ describe Elf do
     end
 
     it 'has name of elf' do
-      expect(elf.bonus).to eq stats
+      expect(elf.stat_bonus).to eq stats
     end
   end
 end

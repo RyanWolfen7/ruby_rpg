@@ -28,6 +28,18 @@ describe '###Feature Test###' do
         expect(character.xp[:max]).to eq 80
       end
     end
+
+    describe 'Elf' do
+      let(:character) {Character.new("Ryan", Elf.new, Fighter.new(Skills_fighters))}
+
+      it 'should load a race and be able to be called' do
+        stat_bonus = { wis: 2, int: 2}
+        expect(character.race).to be_a(Elf)
+        expect(character.race.name).to eq "Elf"
+        expect(character.race.sub_race).to eq "Standard"
+        expect(character.race.stat_bonus).to eq stat_bonus
+      end
+    end
   end
 
   describe '#CLASS#' do

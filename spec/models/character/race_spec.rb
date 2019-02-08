@@ -13,7 +13,7 @@ describe Race do
     end
 
     it 'should hold a nil bonus' do
-      expect(race.bonus).to eq nil
+      expect(race.stat_bonus).to eq nil
     end
   end
 end
