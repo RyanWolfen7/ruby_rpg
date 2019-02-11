@@ -12,6 +12,16 @@ describe '###Feature Test###' do
       2.times { stats.subtract({str: 1})}
       expect(stats.stats[:str]).to eq 10
       expect(stats.points).to eq 26
+      4.times { stats.add({dex: 1})}
+      4.times { stats.add({const: 1})}
+      4.times { stats.add({char: 1})}
+      4.times { stats.add({wis: 1})}
+      6.times { stats.add({int: 1})}
+      expect(stats.stats[:dex]).to eq 16
+      expect(stats.stats[:const]).to eq 16
+      expect(stats.stats[:char]).to eq 16
+      expect(stats.stats[:wis]).to eq 16
+      expect(stats.stats[:int]).to eq 18
     end
   end
 
