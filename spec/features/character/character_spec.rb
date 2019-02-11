@@ -1,7 +1,3 @@
-require './lib/character/character.rb'
-require './lib/character/races/human.rb'
-require './lib/core/dead.rb'
-
 describe '###Feature Test###' do
   let(:attack) {Attack.new}
   let(:dead) {Dead.new}
