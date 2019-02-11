@@ -34,6 +34,13 @@ describe Stat_gen do
       expect(gen.stats[:str]).to eq 13
       expect(gen.points).to eq 23
     end
+
+    it 'should not add more then 18 to stat' do
+      allow(Kernel).to receive(:rand).and_return(24)
+      7.times {gen.add({str: 1})}
+      expect(gen.stats[:str]).to eq 18
+      expect(gen.points).to eq 18
+    end
   end
 
   describe '#subtract' do
