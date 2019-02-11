@@ -35,7 +35,7 @@ describe '###Feature Test###' do
       6.times { stats.add({int: 1})}
       character = Character.new(
         "Ryan", Human.new, Fighter.new(Skills_fighters), stats.stats
-      ) #human adds +1 to int and char, fighter adds +1 to str, dex, const
+      ) #human adds +2 to int and char, fighter adds +1 to str, dex, const
       expect(character.stats[:str]).to eq 11
       expect(character.stats[:dex]).to eq 17
       expect(character.stats[:const]).to eq 17
