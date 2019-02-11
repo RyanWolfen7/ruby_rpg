@@ -50,5 +50,12 @@ describe Stat_gen do
       expect(gen.stats[:str]).to eq 11
       expect(gen.points).to eq 25
     end
+
+    it 'should not subtract more then 10 to stat' do
+      allow(Kernel).to receive(:rand).and_return(24)
+      3.times {gen.subtract({str: 1})}
+      expect(gen.stats[:str]).to eq 10
+      expect(gen.points).to eq 26
+    end
   end
 end
