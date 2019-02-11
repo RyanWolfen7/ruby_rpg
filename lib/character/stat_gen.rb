@@ -22,6 +22,7 @@ class Stat_gen
   end
 
   def subtract(stat)
+    return if min_stat?(stat)
     temp = Hash.new(0)
     stats.each {|key, count| temp[key] += count}
     stat.each  {|key, count| temp[key] -= count}
@@ -33,5 +34,9 @@ class Stat_gen
 
   def max_stat?(stat)
      @stats[stat.keys[0]] == 18
+  end
+
+  def min_stat?(stat)
+     @stats[stat.keys[0]] == 10
   end
 end
