@@ -39,7 +39,7 @@ describe Stat_gen do
   describe '#subtract' do
     it 'should add 1 to strength and minues one point' do
       allow(Kernel).to receive(:rand).and_return(24)
-      gen.add({str: 1})
+      gen.subtract({str: 1})
       expect(gen.stats[:str]).to eq 11
       expect(gen.points).to eq 25
     end
