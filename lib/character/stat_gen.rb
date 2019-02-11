@@ -19,4 +19,12 @@ class Stat_gen
     @stats = temp
     @points -= 1
   end
+
+  def subtract(stat)
+    temp = Hash.new(0)
+    stats.each {|key, count| temp[key] += count}
+    stat.each  {|key, count| temp[key] -= count}
+    @stats = temp
+    @points += 1
+  end
 end
