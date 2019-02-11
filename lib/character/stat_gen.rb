@@ -13,6 +13,7 @@ class Stat_gen
   end
 
   def add(stat)
+    return if max_stat?(stat)
     temp = Hash.new(0)
     stats.each {|key, count| temp[key] += count}
     stat.each  {|key, count| temp[key] += count}
@@ -26,5 +27,11 @@ class Stat_gen
     stat.each  {|key, count| temp[key] -= count}
     @stats = temp
     @points += 1
+  end
+
+  private
+
+  def max_stat?(stat)
+     @stats[stat.keys[0]] == 18
   end
 end
