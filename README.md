@@ -37,6 +37,18 @@ domain models, and no diagrams(at this point anyway). The idea is to increase pr
     - xp_gain(xp) : adds to xp[:current]
     - level_up : goes to next level and increases xp[:max]
 
+#### Stat Generation
+  While there are default stats on character creation the, stat generator allows for random stat enhancement. As soon as it is initialized it loads default stats and assigns a random amount of points.
+
+  - Stat_gen.new
+  ```
+  // example
+  stat_gen = Stat_gen.new
+  ```
+
+  - Actions
+    - add(stat) : adds stat and subtracts a point
+    - subtract(stat) : subtracts a stat and adds a point
 #### Class Creation
   Classes are the arch class of the skills that a character can use. They must be initialized with the class and corresponding skill file. Once created they can be passed to a character. Class < Fighter
   - Fighter.new(Skills_fighters.new)
